@@ -1,4 +1,5 @@
 -- This is a dbt model that creates a dimension table for customers in the Jaffle Shop database.
+-- It combines data from the stg_jaffle_shop_customers and stg_jaffle_shop_orders staging tables to provide a comprehensive view of each customer, including their first and most recent order dates, as well as the total number of orders they have placed.
 with customers as (
 
     select * from {{ ref('stg_jaffle_shop_customers') }}
