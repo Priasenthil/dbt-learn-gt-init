@@ -1,3 +1,4 @@
+-- This is a dbt model that creates a dimension table for customers in the Jaffle Shop database.
 with customers as (
 
     select * from {{ ref('stg_jaffle_shop_customers') }}
